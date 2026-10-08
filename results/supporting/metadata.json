@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "input_sha256": "eea47787db78e2b06bbe5bf774ffc4e08bf086e2d93a7f797d776d6b3f9f78c8",
+  "study_sha256": "5cd6260019d31bc78f4eb929565d1d50a80bba76455f906d91c4da214c4970b5",
+  "supporting_study_sha256": "3b0f83bcd5901fda5a8407052c3ab4a44e0652315e075e219e0d6b052d27a5ed",
+  "python": "3.12.12",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "qiskit": "2.5.1"
+  },
+  "run_count": 640,
+  "tolerances": {
+    "objective": 1e-10,
+    "metrics": 1e-10,
+    "probabilities": 1e-09,
+    "normalization": 1e-12
+  },
+  "csv_records": {
+    "qaoa-runs.csv": 640,
+    "robustness-summary.csv": 16,
+    "mixer-period-checks.csv": 120,
+    "cost-period-counterexamples.csv": 8
+  },
+  "files": {
+    "qaoa-runs.csv": "fde7af32c81a7cd06b1467bb88ba9e508e1193d26fbc3ea12612b3f13b0ee7cb",
+    "robustness-summary.csv": "2458d90e5873dba3c589bee51eda62e0f104c5ae43c8afb1bd80edf7e235756c",
+    "mixer-period-checks.csv": "ba205fa14384d6600a675fd45c99eb8758054e7492223a4afd60cb77f9680301",
+    "cost-period-counterexamples.csv": "d1c505ca37187fbdbff6c3f17e17176fd21e53af0f9cb1925c1bef905daf8955",
+    "qaoa-probabilities.npz": "c03dd50676fb8b49ff29e284caca9e5f901a2665b267f75fdfd7529ba808ac9d",
+    "symmetry-validation.json": "473ce856971399a29877d504896be9b988b43acd543f7e2c25c1fa9745c8878f"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "monitoring": {
+    "title": "GMV Fruit Fly Area Wide Management Program Outlook March 2026",
+    "url": "https://fruitflycontrol.com.au/2026/03/08/queensland-fruit-fly-outlook-march-2026/",
+    "access_date": "2026-07-28",
+    "filename": "Queensland-Fruit-Fly-Outlook-March-2026.pdf",
+    "sha256": "ec98b61b52d48587afc91fc02ee72a09e887158a2ecbdaf4295c3ef969252072",
+    "table": 3,
+    "page": 5,
+    "period": [
+      "2025-12-19",
+      "2026-03-03"
+    ],
+    "attribution": "Goulburn Murray Valley Area Wide Management Fruit Fly Program, funded by the Victorian Government",
+    "reuse_notice": "Publisher permits use in complete original form with acknowledgement and prohibits unauthorised alteration. No permission to redistribute derived GMV values is asserted by this snapshot."
+  },
+  "geometry": {
+    "title": "Vicmap Admin - Locality Polygon Aligned to Property",
+    "url": "https://discover.data.vic.gov.au/en_AU/dataset/vicmap-admin-locality-polygon-aligned-to-property",
+    "access_date": "2026-07-28",
+    "filename": "locality_polygon.json",
+    "sha256": "e1dd6cbd32bafd51da48da19628cb8d49ca6fcd5d4c8b6025903786371ed0f28",
+    "features": 2973,
+    "source_crs": "EPSG:7844",
+    "centroid_crs": "EPSG:7855",
+    "attribution": "State Government of Victoria, Department of Transport and Planning",
+    "licence": "CC BY 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "purpose": "Educational and research purposes",
+  "raw_files_included": false,
+  "processed_file": "processed/localities.csv",
+  "source_version_policy": "ETL requires the recorded SHA-256 values. The publishers may update files; use the bundled processed snapshot for numerical reproduction when the exact original downloads are unavailable."
+}

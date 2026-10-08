@@ -1,0 +1,5 @@
+n,depth,method,shift,probability_l1
+10,2,penalty_x,cost_gamma_plus_2pi,0.657181103014032
+10,2,penalty_x,mixer_beta_plus_pi_over_2,0.6118931192114453
+10,2,xy_dicke,cost_gamma_plus_2pi,0.5889960410041148
+10,2,xy_dicke,mixer_beta_plus_pi_over_2,0.8335868481302098

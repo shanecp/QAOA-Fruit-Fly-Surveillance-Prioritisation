@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "scope": "Classical baselines, penalty diagnostics, optimiser audit, wrapped and direct QAOA comparisons, and exact candidate-set analysis",
+  "instances": {
+    "sizes": [
+      6,
+      8,
+      10,
+      12,
+      39
+    ],
+    "budgets": {
+      "6": 2,
+      "8": 3,
+      "10": 4,
+      "12": 4,
+      "39": 4
+    },
+    "anchor": "SHEPPARTON",
+    "tie_break": "alphabetical locality_name"
+  },
+  "objective": {
+    "alpha": 0.5,
+    "full_set_alphas": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "penalty_factor": 1.1,
+    "risk": "log1p(activity) / candidate-set maximum",
+    "tau": "median nonzero candidate-set pairwise distance",
+    "proximity": "exp(-distance/tau)"
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_angles": {
+    "gamma": [
+      0.0,
+      6.283185307179586
+    ],
+    "beta": [
+      0.0,
+      1.5707963267948966
+    ]
+  },
+  "optimizer": {
+    "rhobeg": 0.5,
+    "tolerance": 1e-06,
+    "powell_xtol": 1e-06,
+    "powell_ftol": 1e-06
+  },
+  "experiments": {
+    "penalty_diagnostic": {
+      "sizes": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "depths": [
+        1,
+        2
+      ],
+      "cap": 150,
+      "methods": [
+        "penalty_x"
+      ],
+      "optimizer": "COBYLA",
+      "angles": "direct",
+      "initialisation": "independent random at each depth",
+      "runs": 80
+    },
+    "penalty_sensitivity": {
+      "sizes": [
+        12
+      ],
+      "depths": [
+        1
+      ],
+      "factors": [
+        0.5,
+        2.0
+      ],
+      "cap": 150,
+      "methods": [
+        "penalty_x"
+      ],
+      "optimizer": "COBYLA",
+      "angles": "direct",
+      "runs": 20
+    },
+    "optimizer_audit": {
+      "sizes": [
+        10,
+        12
+      ],
+      "depths": [
+        1
+      ],
+      "caps": [
+        150,
+        300,
+        600
+      ],
+      "optimizers": [
+        "COBYLA",
+        "Powell"
+      ],
+      "methods": [
+        "penalty_x"
+      ],
+      "angles": "wrapped; Powell also bounded",
+      "bootstrap_seed": 20260730,
+      "practical_tie_relative_tolerance": 0.01,
+      "runs": 120
+    },
+    "wrapped_comparison": {
+      "sizes": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "depths": [
+        1,
+        2
+      ],
+      "caps": {
+        "1": 150,
+        "2": 300
+      },
+      "methods": [
+        "penalty_x",
+        "xy_dicke"
+      ],
+      "optimizer": "COBYLA",
+      "angles": "wrapped",
+      "initialisation": "shared depth-one random start; duplicate own depth-one final angles at depth two",
+      "bootstrap_seed": 20260728,
+      "runs": 160,
+      "bootstrap_omitted_depth_one_groups": 5
+    },
+    "direct_comparison": {
+      "sizes": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "depths": [
+        1,
+        2
+      ],
+      "caps": {
+        "1": 150,
+        "2": 300
+      },
+      "methods": [
+        "penalty_x",
+        "xy_dicke"
+      ],
+      "optimizer": "COBYLA",
+      "angles": "direct",
+      "initialisation": "shared depth-one random start; duplicate own depth-one final angles at depth two",
+      "bootstrap_seed": 20260729,
+      "runs": 160
+    }
+  },
+  "expected_runs": 540,
+  "shot_budgets": [
+    1,
+    10,
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    4096
+  ],
+  "bootstrap_resamples": 10000,
+  "angle_check": {
+    "n": 10,
+    "depth": 2,
+    "parameters": [
+      0.7,
+      1.1,
+      0.4,
+      0.2
+    ]
+  },
+  "tolerances": {
+    "objective": 1e-10,
+    "metrics": 1e-10,
+    "probabilities": 1e-09,
+    "normalization": 1e-12
+  },
+  "numerical_input_protocol": "Recreate the study's pandas CSV float parsing of derived arrays in memory; no intermediate files are required. Full-set activity is normalized independently."
+}

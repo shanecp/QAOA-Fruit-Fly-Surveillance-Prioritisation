@@ -1,0 +1,31 @@
+{
+  "scope": "Supporting experiments: valid mixer periods, rejected cost shift and a 20-seed direct comparison. Shared scientific settings are loaded from study.json.",
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  "expected_runs": 640,
+  "experiments": {
+    "robustness_comparison": {
+      "sizes": [6, 8, 10, 12],
+      "depths": [1, 2],
+      "caps": {"1": 150, "2": 300},
+      "methods": ["penalty_x", "xy_dicke"],
+      "optimizers": ["COBYLA", "Powell"],
+      "angles": "direct, unwrapped and unbounded",
+      "initialisation": "shared depth-one random start; duplicate own method/optimizer/seed depth-one final angles at depth two",
+      "bootstrap_seed": 20261008,
+      "bootstrap_resamples": 10000,
+      "bootstrap_method": "95% percentile interval for the median of paired XY-minus-penalty differences; a separate PCG64 generator with the same seed per optimizer/n/depth group; no multiple-comparison correction",
+      "runs": 640
+    }
+  },
+  "symmetries": {
+    "test_seed": 20261008,
+    "parameter_range": [-4.0, 4.0],
+    "draws_per_size_depth_method": 5,
+    "mixer_periods": {"penalty_x": 3.141592653589793, "xy_dicke": 6.283185307179586},
+    "shift_each_layer_separately": true,
+    "expected_checks": 120,
+    "proposed_cost_period": 6.283185307179586,
+    "probability_tolerance": 1e-10,
+    "cost_condition": "T*(E_z-E_ref) must be an integer multiple of 2*pi for every energy in the relevant spectrum"
+  }
+}

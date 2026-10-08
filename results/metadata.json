@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "input_sha256": "eea47787db78e2b06bbe5bf774ffc4e08bf086e2d93a7f797d776d6b3f9f78c8",
+  "study_sha256": "5cd6260019d31bc78f4eb929565d1d50a80bba76455f906d91c4da214c4970b5",
+  "python": "3.12.12",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "qiskit": "2.5.1",
+    "geopandas": "1.1.4",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.2",
+    "pypdf": "6.14.2"
+  },
+  "run_count": 540,
+  "state_index_convention": "Array index z encodes x_i=(z>>i)&1; canonical bitstrings list x_0 first.",
+  "parameter_order": "gamma_1 ... gamma_p, beta_1 ... beta_p",
+  "csv_records": {
+    "exact-solutions.csv": 7,
+    "classical-baselines.csv": 15,
+    "policy-breakpoints.csv": 7,
+    "qaoa-runs.csv": 540,
+    "qaoa-summary.csv": 432,
+    "paired-comparisons.csv": 78,
+    "sampling-metrics.csv": 4896,
+    "angle-checks.csv": 4
+  },
+  "tolerances": {
+    "objective": 1e-10,
+    "metrics": 1e-10,
+    "probabilities": 1e-09,
+    "normalization": 1e-12
+  },
+  "files": {
+    "exact-solutions.csv": "cf006002d9fcb5097ad2b5fc3bbe542fb632f7f1e467dc3c5e6830baadf9df39",
+    "classical-baselines.csv": "ed1ad40a4cc821072b86d843b571e027a43ea9f9f4e2fac35e388d72435ba09b",
+    "policy-breakpoints.csv": "7aaa8a3e4a361767e3d0d77303fb94ec187e331a3736d8d1853b4fbf7b4fb535",
+    "qaoa-runs.csv": "9d0b8beb71baacb2a4c787f51b8d0360fb04d6cd1ce988a76a5ee6da437ac2e7",
+    "qaoa-summary.csv": "77794d28a165e82c9e5586511897eddb65fd159c23df6cf30cc1f6544b63863a",
+    "paired-comparisons.csv": "ad9ad9aa24a9af50e7d8cdc23848cc00f6794b20d513b499a0fb5996515737c1",
+    "sampling-metrics.csv": "af8828fad41ac8b67b9fdd084a6b3e216873efc2743ef3d5d9d92e91497b9866",
+    "angle-checks.csv": "25377f4bcecc7fe15b5c9933c298bf4d0a54030a20be501ccd2dbb77d3aba788",
+    "qaoa-probabilities.npz": "eaf087805ccd5f668f9dad136e13a2c225922e5d99ce7f7aeb1747e3f46d2681"
+  }
+}

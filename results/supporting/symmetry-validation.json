@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "safe_mixer_shift_checks": 120,
+  "max_safe_shift_probability_difference": 3.885780586188048e-16,
+  "xy_edge_eigenvalues": [
+    -1.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "invalid_period_counterexamples": {
+    "n": 10,
+    "depth": 2,
+    "xy_dicke": {
+      "gamma_plus_2pi_probability_l1": 0.5889960410041148,
+      "beta_plus_pi_over_2_probability_l1": 0.8335868481302098
+    },
+    "penalty_x": {
+      "gamma_plus_2pi_probability_l1": 0.657181103014032,
+      "beta_plus_pi_over_2_probability_l1": 0.6118931192114453
+    }
+  },
+  "interpretation": "X beta+pi is a global phase; ordered XY beta+2*pi repeats every edge. Cost T requires all T*(E-E_ref)/(2*pi) integral. Counterexamples reject the proposed periods only; no claim of aperiodicity or smallest period."
+}
